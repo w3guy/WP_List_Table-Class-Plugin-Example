@@ -226,7 +226,9 @@ class Customers_List extends WP_List_Table {
 			else {
 				self::delete_customer( absint( $_GET['customer'] ) );
 
-				wp_redirect( esc_url( add_query_arg() ) );
+		                // esc_url_raw() is used to prevent converting ampersand in url to "#038;"
+		                // add_query_arg() return the current url
+		                wp_redirect( esc_url_raw(add_query_arg()) );
 				exit;
 			}
 
@@ -245,7 +247,9 @@ class Customers_List extends WP_List_Table {
 
 			}
 
-			wp_redirect( esc_url( add_query_arg() ) );
+			// esc_url_raw() is used to prevent converting ampersand in url to "#038;"
+		        // add_query_arg() return the current url
+		        wp_redirect( esc_url_raw(add_query_arg()) );
 			exit;
 		}
 	}
