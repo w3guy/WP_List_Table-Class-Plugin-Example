@@ -3,7 +3,7 @@ A plugin demonstration on how to use WordPress WP_List_Table Class
 
 # Database SQL dump
 
-```
+``` sql
 CREATE TABLE IF NOT EXISTS `wp_customers` (
 `ID` int(11) NOT NULL,
   `name` varchar(20) NOT NULL,
@@ -26,3 +26,7 @@ ALTER TABLE `wp_customers` ADD PRIMARY KEY (`ID`);
  
 ALTER TABLE `wp_customers` MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 ```
+
+# Security
+
+You should whitelist the orderby parameter your plugin / theme accept to avoid any form of sql injection. See [#2](https://github.com/collizo4sky/WP_List_Table-Class-Plugin-Example/issues/2)
