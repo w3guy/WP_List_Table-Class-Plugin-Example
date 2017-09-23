@@ -2,11 +2,11 @@
 
 /*
 Plugin Name: WP_List_Table Class Example
-Plugin URI: http://sitepoint.com
+Plugin URI: https://www.sitepoint.com/using-wp_list_table-to-create-wordpress-admin-tables/
 Description: Demo on how WP_List_Table Class works
 Version: 1.0
-Author: Agbonghama Collins
-Author URI:  http://w3guy.com
+Author: Collins Agbonghama
+Author URI:  https://w3guy.com
 */
 
 if ( ! class_exists( 'WP_List_Table' ) ) {
