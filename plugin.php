@@ -267,7 +267,7 @@ class SP_Plugin {
 
 	// class constructor
 	public function __construct() {
-		add_filter( 'set-screen-option', [ __CLASS__, 'set_screen' ], 10, 3 );
+		add_filter( 'set_screen_option', [ __CLASS__, 'set_screen' ], 10, 3 );
 		add_action( 'admin_menu', [ $this, 'plugin_menu' ] );
 	}
 
